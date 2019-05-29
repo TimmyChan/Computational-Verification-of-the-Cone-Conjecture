@@ -1,0 +1,35 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+The data in dimension 4 and 5 both have examples of non-terminating sequences. The results in \textbf{subsections \ref{fail1}, \ref{fail2}, \ref{fail3}, \ref{fail4}, \ref{fail5}, \ref{fail6}, \ref{fail7}, \ref{fail8}, \ref{fail9}, \ref{fail10}, \ref{fail11}} show that the top down algorithm will demonstrate a roughly linear increase of the size of Hilbert basis as the number of steps in the algorithm increases. This makes it less and less likely as the number of
+steps grows that we have a terminating process. This evidence suggests the negative
+answer to questions (3) and (4) at the end of \textbf{section \ref{coneconjecturequestions}} 
+
+Some of the experiments do not terminate on the top down algorithm, but terminate on the bottom up algorithm. This suggests that the bottom up algorithm moves in ”wider” steps than the top down algorithm. The expectation is further supported by the fact that when both procedures terminate, the bottom up algorithm does so in a fewer steps than the top down algorithm.
+
+
+\section{Further Study}
+The algorithms can see some further changes. For example, the extremal generator removed by the top down algorithm perhaps can be chosen based on some "greedy" algorithm instead, where we examine the volume of the cones of the possible choices before choosing. However, this may lead to worse computational efficiency, as at each step one would have to calculate the volume of a cone, usually represented as the volume of the parallelepiped created by the extremal rays. 
+
+
+An exhaustive search of particular classes of cones, or cones in regions might become feasible if we can find a quick way to explicitly generate full dimensional cones in a particular region.
+
+On the computer science side, modifying the project so that it is compatible with \texttt{Docker} would allow for computation on a stronger machine, which could provide more certainty towards the questions (3) and (4). 
+
+
+
+\end{document}

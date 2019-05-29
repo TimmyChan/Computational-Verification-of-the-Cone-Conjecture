@@ -1,0 +1,56 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+First, we begin with the idea of linear subspaces of a vector space. Linear subspace is the set of vectors that vanishes on a linear form $a_1 x_1 + \cdots + a_nx_n = 0$ for some scalar coefficients. In this paper, we are interested when the vector space is $\R^d$. Consider the linear subspace shifted away from the origin; we will arrive at the first major concept we need to build up to the definitions of polyhedra and polytopes: 
+
+\begin{definition}[Affine subspace]
+Affine subspaces are the translates of linear subspaces. The dimension of an affine subspace is the dimension of the associated linear subspace. 
+\end{definition}
+Affine subspaces of dimension 0, 1 and 2 are called points, lines and planes, respectively.
+
+Let $V$ be a vector space and $\alpha : V \to \R$ be an affine form, which is a function given by $\alpha(x) = \lambda(x) + \alpha_0$, with a unique linear operator $\lambda$ on $V$. We define a hyperplane by the following construction \cite{GubeladzePolytopesRingsKtheory}.
+
+\begin{definition}[Affine Hyperplane]
+ $$H_\alpha = \{x \in \R^d: \alpha (x) = 0\}$$ A \emph{hyperplane} is the set of vectors in $\R^d$ that vanish on the affine form $\alpha(x)$. A hyperplane is an affine subspace of dimension $d-1$.
+ \end{definition}
+ 
+ Thus, when evaluating any point $x \in \R^d$ that is not on the hyperplane, $\alpha(x) > 0$ or $\alpha(x) < 0$. This gives us a sense of partitioning, as the hyperplane will partition the space into two halves.
+  Imagine cutting $\R^d$ into two parts using a $(d-1)$-dimensional plane; each of the two parts is an affine halfspace. 
+
+  \begin{definition}[Open and Closed Affine Halfspaces] An open affine halfspace is defined as $$H_\alpha^> = \{ x \in V : \alpha (x) >0\}$$ for some affine form $\alpha(x)$. A closed halfspace $H_\alpha^+$ is defined as the union of $H_\alpha$ and $H_\alpha^>$. \end{definition}
+ 
+ Formally, according to standard graduate texts in mathematics on geometry \cite{GubeladzePolytopesRingsKtheory, Ziegler}, we can define a \emph{polyhedron} as the intersection of halfspaces:
+ 
+\begin{definition}[H-Polyhedron]  A subset $P \subset V$ is called an H-polyhedron if it is the intersection of finitely many closed affine halfspaces. The dimension of the polyhedron is determined by the dimension of the smallest affine subspace containing $P$. If $\dim(P)~=~d$, we call $P$ a $d$-polyhedron.
+
+\end{definition}
+
+As one can imagine, since the H-Polyhedron definition depends on an intersection of halfspaces, there exist special hyperplanes for each H-polyhedron where each hyperplane is formed from the associated halfspaces. Furthermore, there are hyperplanes that "touch" the H-polyhedron, and how they "touch" the H-polyhedron is how we define faces of lower dimensions. An example in $\R^3$ is a cube, which will have 6 facets of dimension 2, 12 faces (edges) of dimension 1, and 8 faces (vertices) of dimension 0. This condition is formalized for higher dimensions as follows: 
+
+
+\begin{definition}[Support Hyperplane, Face]
+A hyperplane $H$ is called a support hyperplane of the polyhedron $P$ if $P$ is contained in one of the two closed halfspaces bounded by $H$, and $H \cap P \neq \emptyset$. 
+
+In particular, the intersection $F= H \cap P$ is a face of $P$, and $H$ is called a support hyperplane associated with $F$. 
+\end{definition}
+
+An H-polyhedron is the intersection of finitely many closed halfspaces, and each halfspace is associated with an affine hyperplane; the intersection of these affine hyperplanes and the polytope form the facets, or faces of dimension $d-1$. Other affine hyperplanes may also satisfy the support hyperplane definition, but the intersection may be lower dimensional.
+
+Visually, in $\R^3$, we can imagine support hyperplanes as hyperplanes (in $\R^3$ hyperplanes are simply 2-dimensional planes) that touch the polyhedron's boundary without cutting through the object, and the part of the polytope that the hyperplane "touches" is a face. A 0,1 and $d-1$ dimensional face of a polytope is called a vertex, an edge and a facet, respectively.
+
+
+\end{document}

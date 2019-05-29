@@ -1,0 +1,75 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+Given a fixed dimension $d$, then the set of all cones in $\R^d$ form a partially ordered set \cite{GubeladzePosetCones}.
+An important and interesting aspect of rational cones is to study the lattice elements of the cone.
+
+\begin{definition}[The Partially Ordered set of Pointed Rational Cones in $\R^d$, $\mathrm{Cone}(d)$]
+The set of rational cones in $\R^d$, denoted $\mathrm{Cone}(d)$, forms a poset, where given $C, D \in \mathrm{Cone}(d)$, then we order $C < D$ if and only if there exists a sequence of cones $C_0,\ldots C_n$ such that \begin{align}
+C &= C_0 \subset \cdots \subset C_{n-1} \subset C_n = D,\\
+L(C_i) &= L(C_{i-1})+ \Z_+x \text{ with } x \in C_i \takeaway C_{i-1},\quad i = 1, \ldots, n. \label{ConePosetCondition}
+\end{align}
+If $n = 1$, we call $C \subset D$ an \emph{elementary extension}, or \emph{elementary descend} if read backwards.
+\end{definition}
+
+In particular, the order can be imposed on cones $C$ and $D$ whenever they form a finite chain of cones that satisfy containment; moreover, the lattice of each pair of consecutive cones $C_i$ and $C_{i+1}$ have the property that the outer cone's lattice submonoid, $L(C_{i+1})$, is the Minkowski sum of the inner cone's lattice with one and only one vector external to the inner cone.
+
+While the partial order of $\NPol(x)$ is notoriously difficult to analyze, the partial order in Cones(d) is conjectured to be the inclusion order, which also has significant implication of the topology of the geometric realization of this partially ordered set $\Cones(d)$ \cite{GubeladzePosetCones}.
+%\researchnote{Survey the cone paper and show what is known and current results (more than 1 page)}
+In recent mathematics research, the set of rational cones are important objects in toric algebraic geometry, combinatorial commutative algebra, geometric combinatorics and integer programming \cite{GubeladzePosetCones, GubeladzePolytopesRingsKtheory}. 
+
+The Hilbert bases of cones are difficult to characterize; as such, general results are currently available only in lower dimensions, with counter-examples to conjectures to inform our journey to understanding these objects in higher dimensions.
+
+Gubeladze and Micha\l{}ek proved that the poset order is the inclusion order in dimension 3 (Theorem 3.2 in \cite{GubeladzePosetCones}).
+
+Currently, the state-of-the-art research on normal polytopes involves examining unimodular triangulations \cite{haase_paffenholz_andreas_piechnik_lindsay_santos_francisco_2017}. Analogous to this is the process of triangulating cones into \emph{simplicial} cones. In order to discuss some preliminary standard results on cones, we recall the definition of a few terms:
+\begin{itemize}
+\item A cone $C$ is called \emph{simplicial} if $\mathrm{ExtGen}(C)$ are linearly independent.
+\item A cone $C \subset \R^d$ is called unimodular if $\Hilb(C)$ is a part of a basis of $\Z^d$.
+\item A triangulation of a cone $C$ into simplicial cones is called \emph{unimodular} if the cones in the triangulation are unimodular.
+\item A triangulation of a cone $C$ is called \emph{Hilbert} if the set of extremal generators of the involved cones equals $\Hilb(C)$.
+\end{itemize}
+
+The following is proved in \cite{GubeladzePolytopesRingsKtheory}, the last item was rediscovered from the perspective of toric geometry in 1994-1995 (details can be found in the bibliography of \cite{GubeladzePosetCones}).
+
+\begin{lemma}[Standard results on cones]
+\hfill
+\begin{enumerate}[(a)]
+\item Let $C \subset \R^d$ be a cone and $v \in \Lattice(C)$ be a nonzero element on an edge of $C$. Then $\Lattice(C) + \Z v = \Lattice(C_0) + \Z v  \cong \Lattice(C_0) \times \Z v$ for some $C_0 \subset \R^d$ with $v \notin C_0$.
+\item Let $C \subset \R^d$ be a nonzero cone and $w \in \Lattice(C)$ be an element in the relative interior of $C$. Then $$\Lattice(C) + \Z w = \Lattice(RC).$$
+\item Every nonzero cone has a unimodular triangulation.
+\item Every 2-cone has a unique Hilbert triangulation that is unimodular.
+\item Every 3-dimensional cone has a unimodular Hilbert triangulation. 
+\end{enumerate}
+\end{lemma}
+
+With these standard results, one can give an alternate formulation of the poset condition in $\mathrm{Cones}(d)$, and the proof using the remark above is again in \cite{GubeladzePosetCones} .
+
+\begin{lemma}[Alternative Characterization of Elementary Extension]
+Let $C \subset \R^d$ be a nonzero cone and $v \in \Z^d$ be a primitive vector with $\pm v \notin C$. (This guarantees that $C+\R_+v$ is pointed). Assume $H \subset \R^d \takeaway \{0\}$ is an affine hyperplane, meeting the cone $D = C + \R_+v$ transversally. Let $v' = R_+v \cap H$. (Obtain $v'$ by scaling $v$ so that $v'$ is on $H$.) Then $C \subset D$ is an elementary extension in $\mathrm{Cones}(d)$ if and only if there exists unimodular cones $U_1,\ldots,U_n \subset D$ that satisfy the following conditions:
+\begin{enumerate}[(i)]
+\item $v \in U_i , i=1,\ldots,n$
+\item $D = C \displaystyle\bigcup\left(\bigcup_{i=1}^n U_i\right)$
+\item $\displaystyle\left\{\R_+((U_i \cap H) - v')\right\}_{i=1}^n$ is a triangulation of the cone $\R_+((D \cap H) - v')$. 
+\end{enumerate}
+
+
+\end{lemma}
+ 
+In $\mathrm{Cone}(d)$, there is an important subposet that connects cones to normal polytopes: The set of cones in $(\R^{d-1} \times \R_{>0}) \cup \{0\}$ is denoted $\mathrm{Cone}^+(d)$. Note that the homogenization map sends $\NPol(d-1)$ into $\mathrm{Cone}^+$. 
+
+\end{document}

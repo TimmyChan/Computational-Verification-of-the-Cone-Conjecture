@@ -1,0 +1,48 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+For any rational cone $C$, the lattice elements $\Lattice(C)$ are closed under addition and must contain the additive identity $\vec 0$. Given some pointed rational cone $C \subset \R^d$, the lattice elements $\Lattice(C)$ form an algebraic structure called a monoid under vector addition. Recall that a monoid is a set that is closed under a binary operation with a unit, and it is a set with a structure that generalizes groups by relaxing the definition so that the binary operation does not need to be closed under inverses. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.4\textwidth]{"Hilbert Basis"}
+\caption{Indecomposable elements of the lattice of a cone in $\R^2$.}
+\label{HilbertBasis}
+\end{figure}
+ 
+By Gordan's lemma, this monoid is finitely generated. When a cone is also pointed, the set of generators are finite and unique. With these properties, one can obtain a set of finitely many irreducible elements that is a complete system of generators, which must be contained by every other system of generators. The proof for the existence and uniqueness of this set of minimal and unique generators is found in  \cite{GubeladzePolytopesRingsKtheory, GordanLemma}.
+
+%\researchquestion{Perhaps I should put an image here...}
+
+
+\begin{definition}[Hilbert Basis of Cone $C$]
+Given a pointed rational cone $C$, 
+The \emph{Hilbert basis} of $\mathrm{L}(C)$ is a minimal set of vectors in $\Z^d$ such that every integer vector in $C$ is an integer conical combination of the vectors in the Hilbert basis with integer coefficients \cite{HilbertBasis}.
+\end{definition}
+
+
+In particular, note that $\mathrm{ExtGen}(C) \subseteq \mathrm{Hilb}(C)$, as shown in \textbf{Figure \ref{HilbertBasis}}.
+
+When studying the lattice structure of the cone, loosely speaking the Hilbert basis can help us determine the "complexity" of the structure. 
+
+Now that we are equipped with the definition of a Hilbert basis, we can tie the connection between the normality of a lattice polytope $P \subset \R^{d-1}$ and $C(P) \subset \R^{d}:$ 
+
+\begin{remark}
+$P\subset \R^{d-1}$ is normal if and only if the Hilbert basis of the cone associated with $P$ is exactly the lattice points embedded in the layer $x_0 = 1$, i.e., $\mathrm{Hilb}(C(P)) = \{(1,x) | x \in L(P)\}$
+\end{remark}
+
+\end{document}

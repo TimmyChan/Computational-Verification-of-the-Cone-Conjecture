@@ -1,0 +1,41 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+We are interested in a subset of polyhedra: the set of full-dimensional pointed, rational, polyhedral cones in $\R^d$, denoted as $\mathrm{Cone}(d)$. The reason we are interested in pointed polyhedral rational cones arises from their connection to the normal polytopes. In particular, $\NPol(d-1)$ embeds  into Cone$(d)$ via homogenization map, as stated in section \ref{homogenization_map}. Moreover, the poset structure in $\NPol(d-1)$ is actually preserved in $\mathrm{Cone}(d)$, once we define a partial order on $\mathrm{Cone}(d)$.
+
+
+We shall parse the definition of this object by each term. 
+
+\begin{definition}[Pointed cone]
+We call a cone \emph{pointed} whenever there is no nonzero element $c \in C$ with $-c \in C$. 
+\end{definition}
+
+
+This may be characterized by the language in the section on polytopes; cones in this text are all polyhedral, so a pointed cone is a cone whose linearity space is $\{0\}$. Another characterization of this type of cone is that there exists an affine hyperplane $H$ such that $C \cap H$ is a polytope of dimension $\dim(C)-1$ \cite{GubeladzePolytopesRingsKtheory}. 
+
+\begin{definition}[Rational cone] A cone $C$ is called rational when
+$$ C = \{a_1 x_1 + \cdots +a_d x_d: a_1,\ldots, a_d \in \R_+\} \; \text{ for some }  x_1,\ldots,x_d \in L$$
+
+where $L \subseteq \Q^d$ is a lattice in $\R^d$. In our particular case, we are interested when $L = \Z^d$.
+\end{definition}
+
+
+Henceforth in this thesis, the word \emph{cones} shall contain all of the above assumptions. Since polyhedral cones can be described as the conical hull of finite set of vectors, we give a name for this set of vectors: the first nonzero lattice points of the edges of $C$ are called the \emph{extremal generators} of $C$, written as $\mathrm{ExtGen}(C)$. This condition leads us to give the definition of a primitive vector. A vector $v$ is primitive if it is the generator of the monoid $\Lattice(\R_+ v)$, which by definition of primitive vector is equivalent to a vector in $\Z^d$ whose entries are all coprime.
+
+
+
+\end{document}

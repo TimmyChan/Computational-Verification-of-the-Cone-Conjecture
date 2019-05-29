@@ -1,0 +1,59 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\usepackage[style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+\title{Computational Verification of the Cone Conjecture}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\begin{document}
+\chapter{Introduction}
+\input{Introduction}
+\chapter{Background}
+\input{Background}
+
+\chapter{Lattice Polytopes and Rational Cones}
+\input{"Lattice Polytopes and Rational Cones.tex"}
+
+
+%\chapter{Polytopes and the Cone Conjecture}
+%\input{"Polytopes and the Cone Conjecture.tex"}
+
+%\chapter{Mathematical Results}
+%\input{"Mathematical Results.tex"}
+
+
+
+\chapter{Experimental Procedure}
+\input{Method}
+
+\chapter{Source Code} \label{Source}
+\input{Source}
+
+\chapter{Computational Results}
+\input{Data}
+
+
+\chapter{Conclusion}
+\input{Conclusion}
+
+
+%\appendix{Appendix A: Notation}
+%\input{Notation}
+
+
+\end{document}

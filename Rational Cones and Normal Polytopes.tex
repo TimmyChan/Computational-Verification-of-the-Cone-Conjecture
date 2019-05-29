@@ -1,0 +1,43 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+
+
+The partial order on the set of normal polytopes is preserved; i.e., the homogenization map (equations \ref{H-homogenization_map} and \ref{V-homogenization_map}, which are non-trivially equivalent) is monotonic with respect to the partial order. This means that  $P \subset Q \in \mathrm{NPol}(d-1)$, then $C(P) \subset C(Q) \in \mathrm{Cones}^+(d)$ and $(P < Q) \implies C(P) < C(Q)$. However, the converse is not necessarily true. 
+In the following example, found in \cite{BrunsGubeladzeNormalPolytopes}:
+\begin{example}
+Suppose $$ P = \mathrm{conv}(\{(0,0,2),(0,0,1),(0,1,3),(1,0,0),(2,1,2),(1,2,1)\}) \in \NPol(3).$$
+Then removing the first or the second vertex yields a non-normal polytope, yet $$Q = \mathrm{conv}(\{0,1,3),(1,0,0),(2,1,2),(1,2,1)\}) \subset P \in \NPol(3). $$
+Thus, this pair of normal polytopes $P \subset Q$ in $\NPol(3)$ does not satisfy the poset condition, i.e. $Q \not < P$, but when considering their images in $\mathrm{Cone}^+(d)$, namely, $C(Q) \subset C(P)$, one can find a finite chain that that connects the two in the poset of cones:
+\begin{align*}
+C(P) &= \mathrm{cone}\{(0, 0, 1, 1), (0, 0, 2, 1), (0, 1, 3, 1), (1, 0, 0, 1), (1, 2, 1, 1), (2, 1, 2, 1)\})\\
+C(Q) &= \mathrm{cone}(\{(0, 1, 3, 1), (1, 0, 0, 1), (1, 2, 1, 1), (2, 1, 2, 1)\}).
+\end{align*}
+Then
+\begin{align*}
+ C(P) = D_0 &=  \mathrm{cone}(\{(0, 0, 1, 1),(0, 0, 2, 1),(0, 1, 3, 1),(1, 0, 0, 1),(2, 1, 2, 1),(1, 2, 1, 1)\}) \\
+ D_1 &= \mathrm{cone}(\{(0, 0, 2, 1), (0, 1, 3, 1), (1, 0, 0, 1), (1, 2, 1, 1), (2, 1, 2, 1)\})\\
+ D_2 &= \mathrm{cone}(\{(0, 1, 3, 1),(1, 0, 0, 1),(2, 1, 3, 2),(2, 1, 2, 1),(1, 2, 1, 1)\})\\
+ D_3 &= \mathrm{cone}(\{(0, 1, 3, 1),(1, 0, 0, 1),(2, 1, 2, 1),(1, 2, 1, 1)\}) = C(Q).
+ \end{align*}
+ The above was found using the Hilbert descend, or the "top down" method. Note that this required Hilbert basis elements at height two; so the polytopes formed by $\left\{ x \in \R^d: \begin{bmatrix} 1 \\ x\end{bmatrix} \in C_i \right\}$ are not normal.
+\end{example}
+
+
+
+
+\end{document}

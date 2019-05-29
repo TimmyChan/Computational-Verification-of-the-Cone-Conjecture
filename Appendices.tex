@@ -1,0 +1,52 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+
+\begin{appendices}
+
+The appendices include the source code for the following files:
+\begin{itemize}
+\item \texttt{experiment\_io\_tools.py} This is a small package of i/o scripts written for this experiment. 
+
+\item \texttt{batch\_run\_experiments.py} This is a demonstration of how to create experiments using the \texttt{ConeConjectureTester} object
+
+\item \texttt{batch\_continue.py} This is a demonstration of how to load and continue experiments already created.
+
+\item \texttt{generate\_latex\_files.py} This is the script used to generate the data latex files.
+\end{itemize}
+
+\chapter{experiment\_io\_tools.py}
+\input{"experiment_io_tools.py.tex"}
+
+\chapter{batch\_run\_experiments.py}
+\input{"batch_run_experiments.py.tex"}
+
+\chapter{batch\_continue.py}
+\input{"batch_continue.py.tex"}
+
+\chapter{generate\_latex\_files.py}
+\input{"generate_latex_files.py.tex"}
+%\input{APPENDIX_TopDown}
+
+
+%\input{APPENDIX_BottomUp}
+
+
+\end{appendices}
+
+
+\end{document}

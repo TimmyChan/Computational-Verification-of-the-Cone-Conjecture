@@ -1,0 +1,51 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+The polytopes in this paper are always convex, so first we define convexity and the convex hull of a set.
+
+A set $X \subset \R^d$ is \emph{convex} when between any two points in $X$, the line segment joining the two points is also contained in $X$. More formally:
+
+\begin{definition}[Convex]
+A set $X \subset \R^d$ is convex if for every $x, y \in X$:\\ $\{\lambda x + (1-\lambda)y : 0 \leq \lambda \leq 1\} \subset X$. 
+\end{definition}
+
+As a remark, the intersection of any convex set is again convex. More importantly for any arbitrary set $K \subset \R^d$, there exists a smallest convex set containing $K$ constructed as the intersection of all the convex sets that contain $K$. Alternatively, one can say that the convex hull of $K$ contains every line segment joining any two  elements in the set $K$.
+
+\begin{definition}[Convex hull]
+Given $K \subset \R^d$, the convex hull of $K$, denoted $\mathrm{conv}(K)$, is the smallest convex set that contains $K$:
+\begin{align*}
+\mathrm{conv}(K) 	&= \bigcap \{X \subset \R^d: K \subseteq X, X \text{ convex}\} \\
+					&= \{\lambda_1 x_1 + \cdots + \lambda_n : \{ x_1,\ldots,x_n\} \subseteq K, \lambda_i \geq 0, \sum_{i=1}^n \lambda_i = 1\}.
+\end{align*}
+
+\end{definition}
+
+We will explore two different definitions of the polytope; they are unique representations for each polytope and mathematically equivalent through a nontrivial proof. 
+
+\begin{definition}[V-polytope]
+A $V$-polytope is the convex hull of a finite set of points in $\R^d$.
+\end{definition}
+
+The other definition that depends on the previous section is the halfspace representation of a polytope:
+
+\begin{definition}[H-polytope] An H-polytope is an H-polyhedron that is bounded. Equivalently, an H-polytope $P$ contains no rays of the form $\{x+ty: t \geq 0\}$ for any $x \in P, y \neq 0$. 
+\end{definition}
+
+Finally, a \emph{polytope} is a set $P \subseteq \R^d$ which can be represented as a $V$-polytope or a $H$-polytope. Like the definition for the dimension of a polyhedron, the dimension of a polytope is the dimension of the smallest affine subspace that contains this polytope.
+
+
+\end{document}

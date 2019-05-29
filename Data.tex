@@ -1,0 +1,354 @@
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+
+
+
+\section{Data Collection Technique}
+We examine cones in dimension 4 and 5:
+\begin{table}[h]
+\centering
+\begin{tabular}{c | c| c}
+dimension & number of extremal generators & $k \in \Z: |x_i|< k$ \\ \hline
+4 & (4,5) & 2 \\
+5 & (5,6) & (1,2)
+\end{tabular}
+\caption{Conditions tested.}
+\end{table}
+
+
+The code was written in an object oriented fashion which allows for use in other python scripts. Thus, the experiments are generated in batch; each experiment is named "\{\} generators \{\} bound \{letter\}" where the first "\{\}" is the number of extremal generators and the latter is the bound on the absolute value on each coordinate. Files named with the same \{letter\} will have the same initial conditions. We run a fixed number of steps at the beginning, with a separate script that continues any existing experiment a fixed number of steps or loop for a fixed amount of time. The details of how the script looks can be found in the appendix.
+
+We collect and record the number of steps taken for top down as well as bottom up for a particular pair of cones. Then we examine the Hilbert basis in the algorithmically generated poset chains. To study the complexity of the cones in the poset chain, we record the number of elements in the Hilbert basis, or $\#\Hilb(C)$ and also examine the Euclidean norm of the longest vector in the Hilbert basis of $C$. This information is presented in graphical form, using \texttt{figure} and \texttt{plot} functions in the standard Python package \texttt{pylab}.
+
+Note that the way the graphs are arranged, the top down sequence begins with the "top" cone, or the "outer" cone. In contrast, the bottom up sequence begins with "bottom" or "inner" cone. 
+
+Interestingly, some cones seem to terminate only on one of the algorithms!
+
+
+
+\newpage
+
+
+{
+\singlespacing
+\section{Data in dimension 4}
+\subsection{4 generators 2 bound A}
+\input{"4d 4 generators 2 bound A.tex"}
+\newpage
+
+\subsection{4 generators 2 bound B}
+\input{"4d 4 generators 2 bound B.tex"}
+\newpage
+
+\subsection{4 generators 2 bound C}
+\input{"4d 4 generators 2 bound C.tex"}
+\newpage
+
+\subsection{4 generators 2 bound D}
+\input{"4d 4 generators 2 bound D.tex"}
+\newpage
+
+\subsection{4 generators 2 bound E}
+\input{"4d 4 generators 2 bound E.tex"}
+\newpage
+
+\subsection{4 generators 2 bound F}
+\input{"4d 4 generators 2 bound F.tex"}
+\newpage
+
+\subsection{4 generators 2 bound G}
+\input{"4d 4 generators 2 bound G.tex"}
+\newpage
+
+\subsection{4 generators 2 bound H}
+\input{"4d 4 generators 2 bound H.tex"}
+\newpage
+
+\subsection{4 generators 2 bound I}
+\input{"4d 4 generators 2 bound I.tex"}
+\newpage
+
+\subsection{4 generators 2 bound J}
+\input{"4d 4 generators 2 bound J.tex"}
+\newpage
+
+
+
+\subsection{5 generators 2 bound A}
+\input{"4d 5 generators 2 bound A.tex"}
+\newpage
+
+\subsection{5 generators 2 bound B}
+\input{"4d 5 generators 2 bound B.tex"}
+\newpage
+
+\subsection{5 generators 2 bound C}
+\input{"4d 5 generators 2 bound C.tex"}
+\newpage
+
+\subsection{5 generators 2 bound D}
+\input{"4d 5 generators 2 bound D.tex"}
+\newpage
+
+\subsection{5 generators 2 bound E}
+\input{"4d 5 generators 2 bound E.tex"}
+\newpage
+
+\subsection{5 generators 2 bound F}
+\input{"4d 5 generators 2 bound F.tex"}
+\newpage
+
+\subsection{5 generators 2 bound G}
+\input{"4d 5 generators 2 bound G.tex"}
+\newpage
+
+\subsection{5 generators 2 bound H}
+\input{"4d 5 generators 2 bound H.tex"}
+\newpage
+
+\subsection{5 generators 2 bound I}
+\input{"4d 5 generators 2 bound I.tex"}
+\newpage
+
+\subsection{5 generators 2 bound J} \label{fail1}
+\input{"4d 5 generators 2 bound J.tex"}
+\newpage
+
+
+
+\section{Data in dimension 5}
+\subsection{5 generators 1 bound A}
+\input{"5d 5 generators 1 bound A.tex"}\newpage
+
+\subsection{5 generators 1 bound B}
+\input{"5d 5 generators 1 bound B.tex"}
+\newpage
+
+\subsection{5 generators 1 bound C}
+\input{"5d 5 generators 1 bound C.tex"}
+\newpage
+
+\subsection{5 generators 1 bound D}
+\input{"5d 5 generators 1 bound D.tex"}
+\newpage
+
+\subsection{5 generators 1 bound E}
+\input{"5d 5 generators 1 bound E.tex"}
+\newpage
+
+\subsection{5 generators 1 bound F}
+\label{fail3}
+\input{"5d 5 generators 1 bound F.tex"}
+\newpage
+
+\subsection{5 generators 1 bound G}
+\input{"5d 5 generators 1 bound G.tex"}
+\newpage
+
+\subsection{5 generators 1 bound H}
+\input{"5d 5 generators 1 bound H.tex"}
+\newpage
+
+\subsection{5 generators 1 bound I}
+\label{fail4} %DOUBLE FAIL
+\input{"5d 5 generators 1 bound I.tex"}
+\newpage
+
+\subsection{5 generators 1 bound J}
+\input{"5d 5 generators 1 bound J.tex"}
+\newpage
+
+
+
+
+\subsection{6 generators 1 bound A}
+
+\input{"5d 6 generators 1 bound A.tex"}
+\newpage
+
+\subsection{6 generators 1 bound B}
+
+\input{"5d 6 generators 1 bound B.tex"}
+\newpage
+
+\subsection{6 generators 1 bound C}
+
+\input{"5d 6 generators 1 bound C.tex"}
+\newpage
+
+\subsection{6 generators 1 bound D}
+\input{"5d 6 generators 1 bound D.tex"}
+\newpage
+
+\subsection{6 generators 1 bound E}
+\input{"5d 6 generators 1 bound E.tex"}
+\newpage
+
+\subsection{6 generators 1 bound F}
+\input{"5d 6 generators 1 bound F.tex"}
+\newpage
+
+\subsection{6 generators 1 bound G}
+\input{"5d 6 generators 1 bound G.tex"}
+\newpage
+
+\subsection{6 generators 1 bound H}
+\input{"5d 6 generators 1 bound H.tex"}
+\newpage
+
+\subsection{6 generators 1 bound I}
+
+\input{"5d 6 generators 1 bound I.tex"}
+\newpage
+
+\subsection{6 generators 1 bound J}
+\input{"5d 6 generators 1 bound J.tex"}
+\newpage
+
+
+
+
+\subsection{5 generators 2 bound A}
+\input{"5d 5 generators 2 bound A.tex"}
+\newpage
+
+\subsection{5 generators 2 bound B}
+\input{"5d 5 generators 2 bound B.tex"}
+\newpage
+
+\subsection{5 generators 2 bound C}
+\input{"5d 5 generators 2 bound C.tex"}
+\newpage
+
+\subsection{5 generators 2 bound D}
+\input{"5d 5 generators 2 bound D.tex"}
+\newpage
+
+\subsection{5 generators 2 bound E}
+\label{fail2}
+\input{"5d 5 generators 2 bound E.tex"}
+\newpage
+
+\subsection{5 generators 2 bound F}
+\label{fail3}
+\input{"5d 5 generators 2 bound F.tex"}
+\newpage
+
+\subsection{5 generators 2 bound G}
+\input{"5d 5 generators 2 bound G.tex"}
+\newpage
+
+\subsection{5 generators 2 bound H}
+\input{"5d 5 generators 2 bound H.tex"}
+\newpage
+
+\subsection{5 generators 2 bound I}
+\label{fail4} %double fail
+\input{"5d 5 generators 2 bound I.tex"}
+\newpage
+
+\subsection{5 generators 2 bound J}
+\input{"5d 5 generators 2 bound J.tex"}
+\newpage
+
+
+
+
+\subsection{6 generators 2 bound A}
+\label{fail5} %double fail
+\input{"5d 6 generators 2 bound A.tex"}
+\newpage
+
+\subsection{6 generators 2 bound B}
+\label{fail6} %double fail
+\input{"5d 6 generators 2 bound B.tex"}
+\newpage
+
+
+\subsection{6 generators 2 bound C}
+\label{fail7} %double fail
+\input{"5d 6 generators 2 bound C.tex"}
+\newpage
+
+\subsection{6 generators 2 bound D}
+\input{"5d 6 generators 2 bound D.tex"}
+\newpage
+
+\subsection{6 generators 2 bound E}
+\label{fail8} %double fail
+\input{"5d 6 generators 2 bound E.tex"}
+\newpage
+
+\subsection{6 generators 2 bound F}
+\label{fail9} %double fail
+\input{"5d 6 generators 2 bound F.tex"}
+\newpage
+
+\subsection{6 generators 2 bound G}
+\label{fail10} %double fail
+\input{"5d 6 generators 2 bound G.tex"}
+\newpage
+
+\subsection{6 generators 2 bound H}
+\input{"5d 6 generators 2 bound H.tex"}
+\newpage
+
+\subsection{6 generators 2 bound I}
+\label{fail11} %double fail
+\input{"5d 6 generators 2 bound I.tex"}
+\newpage
+
+\subsection{6 generators 2 bound J}
+\input{"5d 6 generators 2 bound J.tex"}
+\newpage
+}
+\section{Further Explorations using Alternating algorithm}
+As some of the above experiments did not terminate as we expected, we device an alternating algorithm using a combination of the \texttt{bottom\_up} and \texttt{top\_down} algorithms. The results are recorded below. None of the initial conditions with non-terminating results terminated with this alternating method.
+
+{
+\singlespacing
+\newpage
+\subsection{5d 5 generators 2 bound I alternating}
+\input{"5d 5 generators 2 bound I alternating.tex"}
+\newpage
+
+\subsection{5d 6 generators 2 bound A alternating}
+\input{"5d 6 generators 2 bound A alternating.tex"}
+\newpage
+
+\subsection{5d 6 generators 2 bound C alternating}
+\input{"5d 6 generators 2 bound C alternating.tex"}
+\newpage
+
+\subsection{5d 6 generators 2 bound E alternating}
+\input{"5d 6 generators 2 bound E alternating.tex"}
+\newpage
+
+\subsection{5d 6 generators 2 bound F alternating}
+\input{"5d 6 generators 2 bound F alternating.tex"}
+\newpage
+
+\subsection{5d 6 generators 2 bound G alternating}
+\input{"5d 6 generators 2 bound G alternating.tex"}
+\newpage
+
+\subsubsection{5d 6 generators 2 bound I alternating}
+\input{"5d 6 generators 2 bound I alternating.tex"}
+\newpage
+}
+
+\end{document}

@@ -1,0 +1,65 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+Motivated by physics, one measures the smallest possible changes as analogs of "potential" of the jump \cite{GubeladzeNormalPolytopeSurvey}. Furthermore, the set of normal polytopes of the same dimension $d$ form a partial order, and it is  explicitly defined in \cite{BrunsGubeladzeNormalPolytopes}. We give a concise exposition of this partially ordered set (poset) here. First, a pair $(P,Q)$ of normal polytopes of equal dimension is called a \emph{quantum jump} if $P \subset Q$ and $Q$ has exactly one more lattice point than $P$.
+
+
+\begin{definition}[Quantum Jump]
+Let $P, Q \subset \R^d$ be normal polytopes. Then $(P,Q)$ is a quantum jump when $P \subset Q$ and $\#\Lattice(P) + 1 = \#\Lattice(Q)$. 
+\end{definition}
+
+If we fix the ambient dimension, and we consider the set of full dimensional normal polytopes, we can form a partially ordered set. A partially ordered set (or poset) is a set taken together with a partial order on it.
+
+
+\begin{definition}[Partial Order, Partially Ordered Set (Poset)]
+A \emph{relation} "$\leq$" is a partial order \cite{PartialOrder} on a set $P$ if it satisfies:
+\begin{enumerate}
+\item Reflexivity: $a \leq a\;\forall a \in P$,
+\item Antisymmetry: $a \leq b \land b \leq a \implies a = b$ 
+\item Transivity: $a \leq b \land b \leq c \implies a \leq c$.
+\end{enumerate}
+
+Formally, a partially ordered set is defined as an ordered pair $P=(X,\leq)$, where  $X$ is called the ground set of $P$ and $\leq$ is the partial order of $P$ \cite{PosetWolfram}.
+\end{definition}
+
+
+
+
+Armed with these definitions of quantum jumps and partial order, we can define a partial order on the set of full dimensional normal polytopes in $\R^d$, denoted $\NPol(d)$.
+
+
+\begin{definition}[Partially Ordered Set of $\NPol(d)$]
+Let $P, Q$ be normal polytopes, then $P < Q$ if and only if there exists a \emph{finite} sequence of normal polytopes of the form 
+\begin{align} P &= P_0 \subset \cdots P_{n-1} \subset P_n = Q \\
+\ST \# \Lattice(P_i) &= \# \Lattice(P_{i-1}) +1, \text{ for } i = 1,\ldots,n.
+\end{align}
+\end{definition}
+
+We may consider the relation $<$ as the discrete analogue of the set theoretic inclusion between convex compact subsets of $\R^d$. 
+
+According to \cite{BrunsGubeladzeNormalPolytopes}, in the late 1980's, there were two conjectures that aimed to give a clear and succinct characterization of the "normal point configurations". Given that $P$ is some lattice polytope in $\R^d$,  \emph{Unimodular Cover (UC)} was a conjecture which stated that $P$ is normal if and only if $P$ is the union of unimodular simplices (polytopes whose vertices are an affine basis of $\Z^d$), and \emph{Integral Carath\'eodory Property (ICP)}
+was a conjecture which stated that $P$ is normal if and only if for an arbitrary natural number $c \in \N$ and an arbitrary integer point $z \in \Lattice(cP)$ there exist $x_1, \ldots, x_{d+1} \in \Lattice(P)$ and positive integers $a_1,~\ldots, a_{d+1}~\in~\Z_+ \ST z=\sum_{i=1}^{d+1} a_i x_i$ and $\sum_{i=1}^{d+1}  a_i = c$. By examining $\NPol(d)$, in particular the \emph{minimal elements}, called \emph{tight polytopes}, counter examples to (UC) and (ICP) were found in \cite{bruns_gubeladze_1999, bruns_gubeladze_henk_martin_weismantel_1999}. 
+
+In particular, we're interested in the \emph{maximal} elements of the partially ordered set $\NPol(d)$. Given some poset $(P, \leq)$, an element $x \in P$ is maximal when there are no elements in the poset greater than $x$. Similarly, an element $y \in P$ is \emph{minimal} when $\nexists~x~\in~P \ST x < y$.
+
+While the definition of the poset order is simple to write down, the study of the structure of this partially ordered set is difficult, with the existence of maximal elements in this poset in dimension $\geq 4$ \cite{GubeladzePosetCones}. By direct searching using random walks, one can find explicit examples of maximal elements in $\NPol(4)$. Furthermore, the existence of \emph{tight} polytopes, or non-trivial minimal elements has been known for all dimensions $\geq 4$. The existence of nontrivial minimal elements in $\NPol(3)$ is open, and similarly, the existence of maximal elements in $\NPol(4)$ is also unknown \cite{BrunsGubeladzeNormalPolytopes}.  
+
+Recent research has shown that (ICP) is strictly weaker than (UC), and the strategy of shrinking normal polytope was used, and chances are that the weaker property (ICP) is retained longer than the stronger condition (UC), which is lost earlier in this procedure. This is an indication that the poset $\NPol(d)$ is important in understanding the normality property \cite{bruns_2007, bruns_gubeladze_1999, bruns_gubeladze_henk_martin_weismantel_1999}.
+
+In dimensions $d \geq 4$, finding non-trivial minimal elements is relatively simple, since given any $P \in \NPol(d)$ and any $Q \in \NPol(e)$, their \emph{product polytope} is again a minimal element in $\NPol(d+e)$; but finding maximal elements is computationally challenging, and as of the year 2016, there are only a handful of maximal normal polytopes found in dimension 4 and 5 \cite{BrunsGubeladzeNormalPolytopes}.
+
+\end{document}

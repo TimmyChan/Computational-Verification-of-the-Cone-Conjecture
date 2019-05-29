@@ -1,0 +1,34 @@
+
+%--------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	     %
+%                 Date : November 26th, 2016%
+%--------------------------------------------%
+
+\documentclass{TC}
+\usepackage{TCcommon}
+
+\title{TITLE HERE}	% Work Title Here.
+\author{Tsz Timmy Chan}	% YOUR NAME HERE 
+
+\usepackage[notes]{TCheader}
+\usepackage{TCexamtitle}
+%\renewcommand{\benediction}{" " - }
+%\renewcommand{\quoteoftheday}{" " \\ - }
+\begin{document}
+%\researchnote{Make citations}
+
+Normal polytopes and rational cones are important objects in integer programming, optimization, combinatorics, and algebraic geometry \cite{GubeladzePolytopesRingsKtheory}. Recently, Bruns, Gubeladze, and Micha\l{}ek \cite{BrunsGubeladzeNormalPolytopes} initiated a novel approach to these discrete-convex objects by introducing partial orders on them. The resulting poset of normal polytopes is a discrete model of the continuum of convex compacta in Euclidean spaces. Understanding properties of this poset is a challenge and only partial results in this direction are known to date. Later, Gubeladze and Micha\l{}ek \cite{GubeladzePosetCones} defined a partial order on the set rational cones. The latter poset seems more amenable to analysis than the poset of normal polytopes. What is important, if the partial order on cones is trivial, i.e., coincides with the inclusion order (the Cone Conjecture), then the cones provide a handle on the poset of normal polytopes via the homogenization map. Gubeladze and Micha\l{}ek were able to prove the Cone Conjecture in dimension 3 and Paffenholz provided some computational evidence in dimension 4.
+
+In this thesis we develop computational methods to analyze the Cone Conjecture in higher dimensions and provide big data in dimensions 4 and 5, far exceeding the computational results by Paffenholz. Namely, we use two specific types of moves inside the poset of cones (the so-called "Bottom Up" and "Top Down" moves) to link two randomly generated cones, one containing the other. The Cone Conjecture states that any such a pair of cones is linked by a chain. The mentioned specific moves often produce such chains. But there are non-terminating examples as well. In order to get a deeper insight into the complexity of the poset of cones, we keep track of the size of Hilbert bases of the intermediate cones and the lengths of pivotal vectors for the bottom-up and top-down moves. The conclusion is that the method used by Gubeladze and Micha\l{}ek to prove the conjecture in dimension 3 is not appropriate in higher dimensions. New ideas, needed to tackle the conjecture in general, may come from the observed strange monotonicity trends in the Hilbert basis size along the chains of bottom-up and top-down moves. 
+
+In Sections 2 and 3, we give a brief introductory exposition on polytopes, cones, normal polytopes and rational cones. Then, in Sections 4 and 5, we give an exposition on the detailed techniques and implemented algorithms, along with many computational results.
+
+%Normal polytopes and rational cones are important objects in integer programming, optimization, combinatorics and algebraic geometry. The study of these sets, along with the natural partial orders on these objects is at the current forefront of research. 
+
+
+%This thesis attempts to answer a question posed in a recent paper \emph{the Poset of Rational Cones} \cite{GubeladzePosetCones}. Current research on the partially ordered set of rational cones have given results in dimensions two and three, and further explorations by theoretical means is challenging. Thus, we give computational data to give insight into this nortoriously complicated partially ordered set. This partially ordered set is intricately connected with the partially ordered set of normal polytopes, by the way of a homogenization map. 
+
+%In the following sections, we will give a brief introductory exposition on polytopes, cones, normal polytopes and rational cones. Then after, we give an exposition on the detailed techniques used to implement the algorithms described in \cite{GubeladzePosetCones}.
+
+
+\end{document}

@@ -1,0 +1,81 @@
+% thesis.tex
+% This is the main file, which calls up preamble.tex, frontmatter.tex, and thesis.bib as needed.
+
+% Frontmatter shortcuts; note the extra space at the end, which is unfortunately necessary:
+\newcommand\myname{Tsz Leong Chan }
+\newcommand\mytitle{COMPUTATIONAL~VERIFICATION OF THE CONE~CONJECTURE } % The graduate division requires this to be in caps.
+\newcommand\mydegree{Master of Arts } % change to  Master of Science if applicable
+\newcommand\myfield{Mathematics } % e.g., Mathematics
+\newcommand\thismonth{December } % graduation month: May / August / December
+\newcommand\thisyear{2018 } % e.g., 2014
+
+
+\documentclass[12pt,oneside]{sfsuthesis}  
+%WHEN THESIS IS COMPLETED, CHANGE THE NEXT LINE FROM draft TO final, then the paper will be formatted according to the Graduate Division's guidelines
+\usepackage[final]{MAThesisOutputFormat}
+\RequirePackage{standalone}
+
+
+%==========%
+% biblatex %
+%==========%
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+
+
+%=========================%
+% CUSTOM PACKAGES GO HERE %
+%=========================%
+
+
+\usepackage{TCbasic}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[toc,page]{appendix}
+\usepackage{hyperref}
+
+
+\RequirePackage{listings}
+
+
+
+\lstnewenvironment{SAGE}
+  {
+    \lstset{
+        language=Python,
+        basicstyle=\ttfamily \small,
+        breaklines=true,
+        columns=fullflexible,
+        showstringspaces=false}
+  }
+  {
+  }
+
+
+
+
+\begin{document}
+\thesistitle
+% Main body of work:
+\input{content}
+
+%==============%
+% Bibliography %
+%==============%
+
+% BibTex %
+%\bibliographystyle{amsplain}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\singlespacing
+%\bibliography{thesis}
+
+
+
+%BibLatex :
+\printbibliography
+
+\input{Appendices}
+
+\end{document}
